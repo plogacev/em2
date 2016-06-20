@@ -29,7 +29,7 @@ em2(rid, fixationdur, trialinfo, measures='standard', assimilateSaccades=FALSE,
 The em() function computes psycholinguistic measures used in research on sentence processing. 
 
 When the 'measures' parameter is set to "standard" the following measures are computed:
-first fixation duration (FFD), single fixation duration (SFD), first pass reading time or gaze duration (FPRT), right-bounded reading time (RBRT), regression path duration or go-past duration (RPD), total fixation time (TFT), rereading time (RRT), rereading time regressive (RRTR), rereading time progressive (RRTP), first fixation progressive (FFP), total regression count (TRC), right-bounded regression count (RBRC). 
+first fixation duration (FFD), single fixation duration (SFD), first pass reading time or gaze duration (FPRT), right-bounded reading time (RBRT), regression path duration or go-past duration (RPD), total fixation time (TFT), rereading time (RRT), rereading time regressive (RRTR), rereading time progressive (RRTP), first fixation progressive (FFP), total regression count (TRC), right-bounded regression count (RBRC), last pass reading time (LPRT).
 When 'measures' is set to "CRI" then "conditional regression information" will be returned. CRI consists of two components: CFC (conditional fixation count) and CFT (conditional fixation time). CRI provides detailed information about the targets of regressive fixations which started at certain positions. The CFT for a 'source region' and a 'destination region' provides the total time spent fixating the destination region *after* a fixation on the source, but *before* any fixation on a position to the right of the source. CFC provides the number of fixations on the destination region during this perion of time.
 
 }
@@ -76,6 +76,9 @@ When measures="standard", the following measures will be computed for each trial
 
    \item{RBRC}{(Right-Bounded Regression Count)
 	Number of regressions from this position given *before* any region further to the right has been fixated.}
+
+   \item{LPRT}{(Last Pass Reading Time)
+	The sum of all fixations on a position starting from when the region was last entered.}
  
 When measures="CRI", the following measures are computed for each trial and each pair of destination region (rid) and source source region (sourcerid):
 
